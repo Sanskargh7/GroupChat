@@ -1,77 +1,4 @@
-// const messagebtn=document.getElementById('addmsgbtn')
-// const messageinput=document.getElementById('messageinput')
-// messagebtn.addEventListener('click',(e)=>{
-//     e.preventDefault()
-//     const token =localStorage.getItem('token')
-//     let paramString=window.location.href;
-//     let groupid=paramString.split('groupid=')[1]
 
-//     let message=messageinput.value;
-//     console.log(messageinput.value)
-//     messageinput.value=""
-//     axios.post('http://localhost:3000/addmessage',{
-//         groupid:groupid,
-//         message:message
-//     },
-//     {headers:{"Authorization":token}
-//     }).then(res=>{
-//         console.log(res)
-//     })
-// })
-// document.addEventListener('DOMContentLoaded',async()=>{
-//     // setInterval(()=>{
-//         //getMessages()
-//     //    },10000)
-//     addMembers()
-// })
-// function callingGetMessageApi(){
-    
-// }
-// callingGetMessageApi()
-// })
-    
-    
-
-// function getMessages(){
-//     const token=localStorage.getItem('token')
-//     //axios.get('http://localhost:3000/message/getmessage',{headers:{"Authorization":token}}).then(messages=>{
-//     let paramString=window.location.href
-//     //console.log(paramString)
-//     let groupid=paramString.split('groupid=')[1]
-//     //console.log(groupid)
-//     //const token=localStorage.getItem('token')
-//     axios.get(`http://localhost:3000/getmessage?lastmsg=0&groupid=${groupid}`,{
-//         headers:{"Authorization":token}
-//     }).then(messages=>{
-//         let message_cont_ul=document.getElementById('message_cont_ul')
-//         if(messages.data==='user not allowed'){
-//             const add_message=document.getElementById('add_message')
-//             add_message.classList.remove('add_message')
-//             add_message.classList.add('add_message_none')
-//             message_cont_ul.innerHTML="<h1>User not allowed in this group</h1>"
-//         }else{
-//             const msgcontainer=document.getElementById('msgs')
-//             console.log(messages)
-//             for(let i=0;i<messages.data.length;i++){
-//             const msgdiv=document.createElement('div')
-//             msgdiv.classList.add('msgdiv')
-//             const name=document.createElement('div')
-//             name.innerHTML= `<p>${messages.data[i].username}:</p>`
-//             msgdiv.appendChild(name)
-//             const msg=document.createElement('span')
-//             msg.innerHTML=`<p>${messages.data[i].msg}</p>`
-//             msgdiv.appendChild(msg)
-//             msgcontainer.appendChild(msgdiv)
-//             }
-//         }
-//     })
-// }
-// document.addEventListener('DOMContentLoaded',async()=>{
-//     setInterval(()=>{
-//         getMessages()
-//     },1000)
-// })
-//function getMessages(){
     const token=localStorage.getItem('token')
     window.addEventListener('DOMContentLoaded',(e)=>{
         const url=window.location.href
@@ -98,8 +25,7 @@
             })
         })
     })
-//}
-//const token=localStorage.getItem('token')
+
 const sendBtn=document.querySelector('.send-btn')
 sendBtn.addEventListener('click',(e)=>{
     e.preventDefault()
@@ -137,31 +63,7 @@ logoutBtn.addEventListener('click',()=>{
     window.location.replace('./login.html')
 
 })
-// function addMembers(){
-//     const addMembersinput=document.getElementById('addMembersinput')
-//     const addMembersBtn=document.getElementById('addMembersBtn')
-//     addMembersBtn.addEventListener('click',(e)=>{
-//         let paramString=window.location.href
-//         let grpId=paramString.split('grpId=')[1]
-//         const token=localStorage.getItem('token')
-//         axios.post('http://localhost:3000/addUsertogroup',{
-//             groupid:grpId,
-//             user:addMembersinput.value
-//         },{
-//             headers:{"Authorization":token}
-//         }).then(ress=>{
-//             console.log(ress)
-//             if(ress.data.length>2){
-//                 alert(ress.data)
-//             }else{
-//                 alert('user not found')
-//             }
-//             addMembersinput.value=''
-//         }).catch(err=>{
-//             console.log(err)
-//         })
-//     })
-// }
+
     
    
     
