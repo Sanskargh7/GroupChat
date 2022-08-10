@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>chat app</h1>
+    <h3>chat groups</h3>
+    <ul id="groups">
+        <li>village friends</li>
+        <li>university friends</li>
+        <button id="create-group">Create a  group for fun</button>
+        <li> <a href="./group.html"></a>></li>
+        <div class="admin">
+
+        </div>
+        <li><button id="logout">Logout</button></li>
+    </ul>
+    <h4>online users</h4>
+    <ul id="messages_cont_ul">
+        <li>you joined</li>
+        <li>anoop joined</li>
+        <li>you:hi there</li>
+        <li>anoop:hey</li>
+        <li>Akash joined</li>
+        <li>Akash :Hii everyone</li>
+    </ul>
+    
+    <div id="msgs">
+        <h2>Messages</h2>
+    </div>
+    <div>
+        <ul id="message_cont_ul">
+            
+        </ul>
+    </div>
+    
+    
+    <div id="main">
+        <form id="addForm">
+            <input type="text" id="message" placeholder="Enter Message">
+            <button type="submit" class="send-btn">Send Message</button>
+        </form>
+      
+    </div>
+    
+    <script src="./home.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
